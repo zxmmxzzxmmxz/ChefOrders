@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC11B5F41FE86AE200EAA1EA /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11B5F31FE86AE200EAA1EA /* ConnectionManager.swift */; };
+		CC11B5FE1FE8705200EAA1EA /* ChefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11B5FD1FE8705200EAA1EA /* ChefViewController.swift */; };
+		CC11B6001FE8706A00EAA1EA /* WaiterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11B5FF1FE8706A00EAA1EA /* WaiterViewController.swift */; };
+		CC11B6021FE872D400EAA1EA /* ChefOrdersInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11B6011FE872D400EAA1EA /* ChefOrdersInterface.swift */; };
 		CC3F965D1FE4819A0000C791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F965C1FE4819A0000C791 /* AppDelegate.swift */; };
-		CC3F965F1FE4819A0000C791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F965E1FE4819A0000C791 /* ViewController.swift */; };
+		CC3F965F1FE4819A0000C791 /* RoleSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F965E1FE4819A0000C791 /* RoleSelectViewController.swift */; };
 		CC3F96621FE4819A0000C791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3F96601FE4819A0000C791 /* Main.storyboard */; };
 		CC3F96651FE4819A0000C791 /* ChefOrders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC3F96631FE4819A0000C791 /* ChefOrders.xcdatamodeld */; };
 		CC3F96671FE4819A0000C791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3F96661FE4819A0000C791 /* Assets.xcassets */; };
@@ -27,9 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC11B5F31FE86AE200EAA1EA /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		CC11B5FD1FE8705200EAA1EA /* ChefViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefViewController.swift; sourceTree = "<group>"; };
+		CC11B5FF1FE8706A00EAA1EA /* WaiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaiterViewController.swift; sourceTree = "<group>"; };
+		CC11B6011FE872D400EAA1EA /* ChefOrdersInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefOrdersInterface.swift; sourceTree = "<group>"; };
 		CC3F96591FE4819A0000C791 /* ChefOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3F965C1FE4819A0000C791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC3F965E1FE4819A0000C791 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC3F965E1FE4819A0000C791 /* RoleSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectViewController.swift; sourceTree = "<group>"; };
 		CC3F96611FE4819A0000C791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC3F96641FE4819A0000C791 /* ChefOrders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChefOrders.xcdatamodel; sourceTree = "<group>"; };
 		CC3F96661FE4819A0000C791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,12 +88,16 @@
 			isa = PBXGroup;
 			children = (
 				CC3F965C1FE4819A0000C791 /* AppDelegate.swift */,
-				CC3F965E1FE4819A0000C791 /* ViewController.swift */,
+				CC3F965E1FE4819A0000C791 /* RoleSelectViewController.swift */,
 				CC3F96601FE4819A0000C791 /* Main.storyboard */,
 				CC3F96661FE4819A0000C791 /* Assets.xcassets */,
 				CC3F96681FE4819A0000C791 /* LaunchScreen.storyboard */,
 				CC3F966B1FE4819A0000C791 /* Info.plist */,
 				CC3F96631FE4819A0000C791 /* ChefOrders.xcdatamodeld */,
+				CC11B5F31FE86AE200EAA1EA /* ConnectionManager.swift */,
+				CC11B5FD1FE8705200EAA1EA /* ChefViewController.swift */,
+				CC11B5FF1FE8706A00EAA1EA /* WaiterViewController.swift */,
+				CC11B6011FE872D400EAA1EA /* ChefOrdersInterface.swift */,
 			);
 			path = ChefOrders;
 			sourceTree = "<group>";
@@ -202,8 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3F965F1FE4819A0000C791 /* ViewController.swift in Sources */,
+				CC11B5F41FE86AE200EAA1EA /* ConnectionManager.swift in Sources */,
+				CC3F965F1FE4819A0000C791 /* RoleSelectViewController.swift in Sources */,
+				CC11B6021FE872D400EAA1EA /* ChefOrdersInterface.swift in Sources */,
 				CC3F965D1FE4819A0000C791 /* AppDelegate.swift in Sources */,
+				CC11B6001FE8706A00EAA1EA /* WaiterViewController.swift in Sources */,
+				CC11B5FE1FE8705200EAA1EA /* ChefViewController.swift in Sources */,
 				CC3F96651FE4819A0000C791 /* ChefOrders.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
