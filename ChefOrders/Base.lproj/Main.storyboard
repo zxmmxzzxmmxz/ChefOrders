@@ -13,7 +13,7 @@
         <!--Chef View Controller-->
         <scene sceneID="4Th-ox-wF0">
             <objects>
-                <viewController id="qve-4C-by2" customClass="ChefViewController" sceneMemberID="viewController">
+                <viewController id="qve-4C-by2" customClass="ChefViewController" customModule="ChefOrders" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgg-13-Nmi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

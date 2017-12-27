@@ -11,7 +11,7 @@ import MultipeerConnectivity
 
 class ConnectionManager : NSObject{
     lazy var session : MCSession = {
-        let session = MCSession(peer: self.myPeerId, securityIdentity: nil, encryptionPreference: .required)
+        let session = MCSession(peer: self.myPeerID, securityIdentity: nil, encryptionPreference: .required)
         session.delegate = self
         return session
     }()
@@ -28,7 +28,7 @@ class ConnectionManager : NSObject{
         
         if session.connectedPeers.count > 0 {
             do {
-                try self.session.send(colorName.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+                //try self.session.send(colorName.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
             }
             catch let error {
                 NSLog("%@", "Error for sending: \(error)")
@@ -38,8 +38,8 @@ class ConnectionManager : NSObject{
     }
     
     override init() {
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerID,discoveryInfo: nil, serviceType: ConnectionAdvertiser.SERVICE_NAME);
-         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceName)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerID,discoveryInfo: nil, serviceType: ConnectionManager.SERVICE_NAME);
+         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerID, serviceType: ConnectionManager.SERVICE_NAME)
         super.init();
         self.serviceAdvertiser.delegate = self;
         self.serviceAdvertiser.startAdvertisingPeer();
@@ -80,11 +80,6 @@ extension ConnectionManager : MCNearbyServiceBrowserDelegate {
         NSLog("%@", "lostPeer: \(peerID)")
     }
     
-    func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        NSLog("%@", "foundPeer: \(peerID)")
-        NSLog("%@", "invitePeer: \(peerID)")
-        browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 10)
-    }
     
 }
 
@@ -100,7 +95,7 @@ extension ConnectionManager : MCSessionDelegate {
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         NSLog("%@", "didReceiveData: \(data)")
         let str = String(data: data, encoding: .utf8)!
-        self.delegate?.colorChanged(manager: self, colorString: str)
+        self.delegate?.textChanged(manager: self, text: str)
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -115,5 +110,5 @@ extension ConnectionManager : MCSessionDelegate {
         NSLog("%@", "didFinishReceivingResourceWithName")
     }
     
-}s
+}
 

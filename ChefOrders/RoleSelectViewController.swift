@@ -10,7 +10,7 @@ import UIKit
 
 class RoleSelectViewController: UIViewController {
     
-    private let connectionService = ConnectionAdvertiser();
+    private let connectionService = ConnectionManager();
 
     
     override func viewDidLoad() {
