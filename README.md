@@ -1,4 +1,5 @@
 # ChefOrders
 
-This project is created to create an IOS app to provide an online easy to user ordering interface for restaurants to easily manage internal orders
+  This project aims to create an IOS app providing an online, easy-to-use ordering interface 
+  for restaurants to manage internal orders easier
 
